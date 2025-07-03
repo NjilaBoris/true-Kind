@@ -64,3 +64,16 @@ body {
 @utility flex-center {
   @apply flex items-center justify-center;
 }
+
+.word {
+  overflow: hidden;
+  font-family: var(--font-ppmori-regular);
+  font-weight: 600;
+  line-height: 1;
+}
+.word1,
+.word6 {
+  overflow: hidden;
+  font-family: var(--font-editorial-italic);
+  font-weight: 400;
+}

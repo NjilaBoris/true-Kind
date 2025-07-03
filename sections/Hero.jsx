@@ -2,10 +2,19 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import { BiArrowToLeft } from "react-icons/bi";
 import "@polymer/iron-icons/iron-icons.js";
+import { useGSAP } from "@gsap/react";
+import { SplitText } from "gsap/all";
 
 const Hero = () => {
+  useGSAP(() => {
+    let headingSplit = SplitText.create("#heading", {
+      type: "words",
+      wordsClass: "word++",
+    });
+    console.log(headingSplit);
+  }, []);
   return (
-    <div className="relative w-full h-screen overflow-hidden">
+    <div className="relative w-full h-dvh overflow-hidden">
       <Navbar />
       <video
         src="/public/video/default (3).mp4"
@@ -16,11 +25,14 @@ const Hero = () => {
       />
       <div className="flex justify-around h-[90%] items-center flex-col z-20 ">
         <div className="text-center flex flex-col gap-2">
-          <h1 className="text-[3.8rem]  leading-15 font-semibold overflow-hidden text-light-400">
-            <span className="font-editorial-italic">True</span> to Oneself{" "}
-            <br /> kind to <span className="font-editorial-italic">Nature</span>
+          <h1
+            id="heading"
+            className="text-[4.62rem]  leading-12  overflow-hidden text-light-400"
+          >
+            True to Oneself
+            <br /> kind to Nature
           </h1>
-          <p className="text-[0.6rem] text-light-300">
+          <p className="text-[0.7rem] text-light-300">
             Unreservedly honest products that truly work, be <br /> kind to skin
             and the planet – no exceptions!
           </p>
@@ -29,7 +41,7 @@ const Hero = () => {
         <div
           className="bg-light-500 relative w-1/2 rounded-full flex justify-center items-center"
           style={{
-            padding: "1.5rem 1.5rem",
+            padding: "1.2rem 1.2rem",
           }}
         >
           <p className="text-[0.8rem] uppercase underline">
@@ -40,7 +52,7 @@ const Hero = () => {
             style={{ padding: "1rem" }}
           >
             <svg
-              className="h-[0.9rem] w-[0.9rem] text-[1.5rem] text-center"
+              className="h-[0.92rem] w-[0.92rem] text-[1.5rem] text-center"
               class="icon-arrow"
               width="7"
               height="5"

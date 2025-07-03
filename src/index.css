@@ -12,6 +12,7 @@
 body {
   overflow-x: hidden;
   scroll-behavior: smooth;
+  font-family: var(--font-ppmori-regular);
 }
 @theme {
   --font-editorial-italic: "editorial-italic", sans-serif;
@@ -32,6 +33,7 @@ body {
   --color-light-600: #f3e8e7;
   --color-light-700: #d8d0c4;
   --color-light-800: #787878;
+  --color-light-900: #a5a5a5;
 
   --color-red-900: #f1cccf;
 }
@@ -39,23 +41,23 @@ body {
 @layer base {
   @font-face {
     font-family: "editorial-italic";
-    src: url("/public/fonts/EditorialNew-Italic.ttf") format(".ttf");
+    src: url("/public/fonts/EditorialNew-Italic.ttf");
   }
   @font-face {
     font-family: "editorial-light";
-    src: url("/public/fonts/EditorialNew-Lightitalic.ttf") format(".ttf");
+    src: url("/public/fonts/EditorialNew-Lightitalic.ttf");
   }
   @font-face {
     font-family: "editorial-regular";
-    src: url("/public/fonts/EditorialNew-Regular.ttf") format(".ttf");
+    src: url("/public/fonts/EditorialNew-Regular.ttf");
   }
   @font-face {
     font-family: "ppmori-regular";
-    src: url("/public/fonts/PPMori-Regular.ttf") format(".ttf");
+    src: url("/public/fonts/PPMori-Regular.ttf");
   }
   @font-face {
     font-family: "ppmori-bold";
-    src: url("/public/fonts/PPMori-SemiBold.ttf") format(".ttf");
+    src: url("/public/fonts/PPMori-SemiBold.ttf");
   }
 }
 

@@ -16,18 +16,21 @@ const Hero = () => {
   return (
     <div className="relative w-full h-dvh overflow-hidden">
       <Navbar />
-      <video
-        src="/public/video/default (3).mp4"
-        muted
-        loop
-        autoPlay
-        className="absolute -z-2 top-0 left-0  w-[100vw] object-cover object-center"
-      />
+      <div className="absolute w-full -z-2 top-0 left-0 h-screen">
+        <video
+          src="/video/default (3).mp4"
+          muted
+          loop
+          autoPlay
+          className="w-full h-full object-cover object-center"
+        />
+      </div>
+
       <div className="flex justify-around h-[90%] items-center flex-col z-20 ">
         <div className="text-center flex flex-col gap-2">
           <h1
             id="heading"
-            className="text-[4.62rem]  leading-12  overflow-hidden text-light-400"
+            className="text-[4.62rem]  leading-5  overflow-hidden text-light-400"
           >
             True to Oneself
             <br /> kind to Nature
@@ -44,7 +47,7 @@ const Hero = () => {
             padding: "1.2rem 1.2rem",
           }}
         >
-          <p className="text-[0.8rem] uppercase underline">
+          <p className="text-[0.71rem] text-[#3B3B3B] uppercase underline">
             Explore All Products
           </p>
           <div

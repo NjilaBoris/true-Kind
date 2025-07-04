@@ -3,6 +3,7 @@ import { ScrollTrigger, SplitText } from "gsap/all";
 import gsap from "gsap";
 import Hero from "../sections/Hero";
 import Lenis from "lenis";
+import Overlay from "../sections/Overlay";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
@@ -20,7 +21,7 @@ const App = () => {
   return (
     <>
       <Hero />
-      <div className="bg-red-50 h-screen w-full" />
+      <Overlay />
     </>
   );
 };

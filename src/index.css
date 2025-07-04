@@ -41,23 +41,23 @@ body {
 @layer base {
   @font-face {
     font-family: "editorial-italic";
-    src: url("/public/fonts/EditorialNew-Italic.ttf");
+    src: url("/fonts/EditorialNew-Italic.ttf");
   }
   @font-face {
     font-family: "editorial-light";
-    src: url("/public/fonts/EditorialNew-Lightitalic.ttf");
+    src: url("/fonts/EditorialNew-Lightitalic.ttf");
   }
   @font-face {
     font-family: "editorial-regular";
-    src: url("/public/fonts/EditorialNew-Regular.ttf");
+    src: url("/fonts/EditorialNew-Regular.ttf");
   }
   @font-face {
     font-family: "ppmori-regular";
-    src: url("/public/fonts/PPMori-Regular.ttf");
+    src: url("/fonts/PPMori-Regular.ttf");
   }
   @font-face {
     font-family: "ppmori-bold";
-    src: url("/public/fonts/PPMori-SemiBold.ttf");
+    src: url("/fonts/PPMori-SemiBold.ttf");
   }
 }
 
@@ -76,4 +76,10 @@ body {
   overflow: hidden;
   font-family: var(--font-editorial-italic);
   font-weight: 400;
+}
+.line,
+.cta-lable,
+.words,
+.count .digit {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }

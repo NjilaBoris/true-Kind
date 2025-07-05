@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
-import { ScrollTrigger, SplitText } from "gsap/all";
+import { CustomEase, ScrollTrigger, SplitText } from "gsap/all";
 import gsap from "gsap";
 import Hero from "../sections/Hero";
 import Lenis from "lenis";
 import Overlay from "../sections/Overlay";
 
-gsap.registerPlugin(ScrollTrigger, SplitText);
+gsap.registerPlugin(ScrollTrigger, SplitText, CustomEase);
 
 const App = () => {
   useEffect(() => {
@@ -21,7 +21,6 @@ const App = () => {
   return (
     <>
       <Hero />
-      <Overlay />
     </>
   );
 };

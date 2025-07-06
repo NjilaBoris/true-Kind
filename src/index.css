@@ -86,7 +86,7 @@ body {
 .divider {
   transform: scaleY(0);
 }
-.block {
+.blocks {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 #word-1 h1 {
@@ -136,7 +136,7 @@ body {
 #word-2 h1 {
   transform: translateY(120%);
 }
-.block {
+.blocks {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 .divider {

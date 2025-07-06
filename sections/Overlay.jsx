@@ -96,7 +96,7 @@ const Overlay = () => {
       },
       "<"
     );
-    tl.to(".block", {
+    tl.to(".blocks", {
       clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
       duration: 1,
       stagger: 0.1,
@@ -137,11 +137,19 @@ const Overlay = () => {
       },
       "<"
     );
-
+    tl.set(
+      ".cta",
+      {
+        x: 350,
+        opacity: 0,
+      },
+      "<"
+    );
     tl.to(
       ".cta",
       {
         scale: 1,
+        opacity: 1,
         duration: 1.5,
         delay: 0.75,
       },
@@ -168,12 +176,12 @@ const Overlay = () => {
   });
   return (
     <div
-      className="w-full fixed top-0 right-0 z-100 h-dvh bg-dark-100 text-white"
+      className="w-full fixed top-0 right-0 z-100 h-dvh bg-dark-400  text-white"
       id="container"
     >
       <div className="absolute top-0 w-full h-full flex">
-        <div className="block w-full h-full bg-[#303030]"></div>
-        <div className="block w-full h-full bg-[#303030]"></div>
+        <div className="blocks w-full h-full bg-[#303030]"></div>
+        <div className="blocks w-full h-full bg-[#303030]"></div>
       </div>
       <div className="absolute top-[40%] left-2/5 flex gap-[0.2rem] translate-1/2">
         <div

@@ -4,6 +4,7 @@ import gsap from "gsap";
 import Hero from "../sections/Hero";
 import Lenis from "lenis";
 import Overlay from "../sections/Overlay";
+import Details from "../sections/Details";
 
 gsap.registerPlugin(ScrollTrigger, SplitText, CustomEase);
 
@@ -21,6 +22,7 @@ const App = () => {
   return (
     <>
       <Hero />
+      <Details />
     </>
   );
 };

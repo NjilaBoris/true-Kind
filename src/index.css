@@ -97,6 +97,7 @@ body {
 }
 ::selection {
   background-color: var(--color-dark-500);
+  color: white;
 }
 
 .heroVideo {
@@ -145,4 +146,9 @@ body {
 
 .cta {
   transform: translateX(-50%) scale(0.8);
+}
+.mask {
+  -webkit-mask-image: url("/images/Ellipse\ 1.png");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
 }

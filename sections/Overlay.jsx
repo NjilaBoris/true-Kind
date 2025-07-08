@@ -220,7 +220,9 @@ const Overlay = () => {
           >
             {group.split("").map((digit, digitIndex) => (
               <div className="digit flex-1 pt-[1rem] " key={digitIndex}>
-                <h1 className="text-[10rem] font-[400]">{digit}</h1>
+                <h1 className="text-[10rem] font-[400] font-editorial-regular">
+                  {digit}
+                </h1>
               </div>
             ))}
           </div>

@@ -5,6 +5,7 @@ import Hero from "../sections/Hero";
 import Lenis from "lenis";
 import Overlay from "../sections/Overlay";
 import Details from "../sections/Details";
+import CardSection from "../sections/CardSection";
 
 gsap.registerPlugin(ScrollTrigger, SplitText, CustomEase);
 
@@ -23,6 +24,11 @@ const App = () => {
     <>
       <Hero />
       <Details />
+      <div
+        className="bg-light-700 w-11/12 h-[1px]"
+        style={{ margin: "auto" }}
+      />
+      <CardSection />
     </>
   );
 };

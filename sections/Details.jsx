@@ -6,19 +6,8 @@ import productsDetails from "../constant";
 
 gsap.registerPlugin(ScrollTrigger);
 const Details = () => {
-  const detailsContainerRef = useRef(null);
-  useGSAP(() => {
-    const details = document.querySelectorAll(".containerImg");
-    console.log(details);
-    let tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: detailsContainerRef,
-        scrub: true,
-      },
-    });
-  });
   return (
-    <div className="h-[240vh] relative w-full">
+    <div className="h-[190vh] relative w-full">
       <div className="" style={{ padding: "5rem" }}>
         <h1 className="text-[3.20rem] uppercase font-extrabold text-dark-300 leading-15">
           Clean, Conscious, <br /> Performance
@@ -36,7 +25,7 @@ const Details = () => {
           </h2>
         </div>
       </div>
-      <div className="absolute right-[20%] top-[20%]">
+      <div className="absolute right-[20%] top-[20%] imgLeaf">
         <img src="/images/leaf.png" className="object-cover size-[15rem]" />
       </div>
       <div className="h-screen w-full mask">

@@ -1,4 +1,6 @@
 import React from "react";
+import MagneticButton from "../components/MagneticButton";
+import Button from "../components/Button";
 
 const EchoText = () => {
   return (
@@ -36,6 +38,22 @@ const EchoText = () => {
             deliver real results.
           </p>
         </div>
+      </div>
+      <div
+        className="flex justify-center items-center absolute left-[18%] top-[27%]"
+        style={{ paddingTop: "1.8rem" }}
+      >
+        <MagneticButton>
+          <div className="flex  items-center gap-2 cursor-pointer ">
+            <Button
+              icon="/icons/arrow-upright-white.svg"
+              otherClasses="size-20 !bg-dark-200"
+            />
+            <a className="underline  uppercase text-[0.6rem]">
+              Our <br /> philosophy
+            </a>
+          </div>
+        </MagneticButton>
       </div>
     </div>
   );

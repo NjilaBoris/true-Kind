@@ -1,4 +1,6 @@
 import React from "react";
+import Button from "../components/Button";
+import MagneticButton from "../components/MagneticButton";
 
 const Features = () => {
   return (
@@ -6,7 +8,7 @@ const Features = () => {
       className="bg-dark-200 h-[120vh] w-full flex items-center"
       style={{ padding: "3rem" }}
     >
-      <div className="h-full w-full bg-light-300">
+      <div className=" w-full bg-light-300">
         <div className="overflow-hidden">
           <img
             src="/images/shop-hero.jpg"
@@ -47,10 +49,11 @@ const Features = () => {
         </div>
         <div className="flex items-center gap-5">
           <div className="w-[20rem]">
-            <div className="w-full h-[10rem]">
+            <div className="w-full h-[10rem] overflow-hidden">
               <img
                 src="/images/login.jpg"
-                className="h-full w-full aspect-square object-cover object-center"
+                className="h-full w-full aspect-square object-cover transition-all
+                 hover:scale-[1] object-center scale-[1.2] cursor-pointer"
               />
             </div>
             <div
@@ -68,10 +71,11 @@ const Features = () => {
           </div>
 
           <div className="w-[20rem]">
-            <div className="h-[10rem] w-full">
+            <div className="h-[10rem] w-full overflow-hidden">
               <img
-                src="/images/explore-1.jpg"
-                className="h-full w-full  object-center object-cover aspect-square"
+                src="/images/shop-hero-m.jpg"
+                className="h-full w-full   object-cover aspect-square transition-all
+                 hover:scale-[1] object-center scale-[1.2] cursor-pointer"
               />
             </div>
             <div
@@ -87,6 +91,22 @@ const Features = () => {
               </div>
             </div>
           </div>
+        </div>
+        <div
+          className="flex justify-center items-center"
+          style={{ paddingTop: "1.8rem" }}
+        >
+          <MagneticButton>
+            <div className="flex flex-col items-center gap-2 cursor-pointer">
+              <Button
+                icon="/icons/arrow-right-dark.svg"
+                otherClasses="size-15 bg-light-300"
+              />
+              <a className="underline text-light-500 uppercase text-[0.6rem]">
+                See all
+              </a>
+            </div>
+          </MagneticButton>
         </div>
       </div>
     </div>

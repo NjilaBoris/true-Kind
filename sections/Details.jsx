@@ -5,6 +5,7 @@ import { ScrollTrigger } from "gsap/all";
 import productsDetails from "../constant";
 import MagneticButton from "../components/MagneticButton";
 import Button from "../components/Button";
+import TextReveal from "../components/TextReveal";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -12,20 +13,28 @@ const Details = () => {
   return (
     <div className="h-[190vh] relative w-full">
       <div className="" style={{ padding: "5rem" }}>
-        <h1 className="text-[3.20rem] uppercase font-extrabold text-dark-300 leading-15">
-          Clean, Conscious, <br /> Performance
-        </h1>
+        <TextReveal>
+          <h1 className="text-[3.20rem] uppercase font-extrabold text-dark-300 leading-15">
+            Clean, Conscious, <br /> Performance
+          </h1>
+        </TextReveal>
+
         <div
           className="flex  items-center gap-[3rem]"
           style={{ marginTop: "0.2rem" }}
         >
-          <p className="text-[0.75rem]">
-            Unreservedly honest products that truly work, be <br /> kind to skin
-            and the planet – no exceptions!
-          </p>
-          <h2 className="text-[4.48rem] text-dark-300 font-editorial-italic scale-[1.2]">
-            skincare.
-          </h2>
+          <TextReveal>
+            <p className="text-[0.75rem]">
+              Unreservedly honest products that truly work, be <br /> kind to
+              skin and the planet – no exceptions!
+            </p>
+          </TextReveal>
+
+          <TextReveal>
+            <h2 className="text-[4.48rem] text-dark-300 font-editorial-italic scale-[1.2]">
+              skincare.
+            </h2>
+          </TextReveal>
         </div>
       </div>
       <div className="absolute right-[20%] top-[20%] imgLeaf" data-speed="1">

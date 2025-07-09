@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { CustomEase, ScrollTrigger, SplitText } from "gsap/all";
+import { CustomEase, ScrollSmoother, ScrollTrigger, SplitText } from "gsap/all";
 import gsap from "gsap";
 import Hero from "../sections/Hero";
 import Lenis from "lenis";

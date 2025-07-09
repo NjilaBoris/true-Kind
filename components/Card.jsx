@@ -1,9 +1,9 @@
 import React from "react";
 
-const Card = ({ type, icon, image, heading1, heading2, price }) => {
+const Card = ({ type, icon, image, heading1, heading2, price, className }) => {
   return (
     <div
-      className="bg-red-900 rounded-2xl w-full h-full"
+      className={`bg-red-900 rounded-2xl w-full h-full ${className}`}
       style={{ padding: "1rem" }}
     >
       <div>

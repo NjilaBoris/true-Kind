@@ -1,10 +1,11 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
-import React, { useRef } from "react";
+
 import productsDetails from "../constant";
 
 gsap.registerPlugin(ScrollTrigger);
+
 const Details = () => {
   return (
     <div className="h-[190vh] relative w-full">
@@ -25,7 +26,7 @@ const Details = () => {
           </h2>
         </div>
       </div>
-      <div className="absolute right-[20%] top-[20%] imgLeaf">
+      <div className="absolute right-[20%] top-[20%] imgLeaf" data-speed="1">
         <img src="/images/leaf.png" className="object-cover size-[15rem]" />
       </div>
       <div className="h-screen w-full mask">

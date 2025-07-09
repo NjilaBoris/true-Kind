@@ -6,6 +6,8 @@ import Lenis from "lenis";
 import Overlay from "../sections/Overlay";
 import Details from "../sections/Details";
 import CardSection from "../sections/CardSection";
+import EchoText from "../sections/EchoText";
+import Features from "../sections/Features";
 
 gsap.registerPlugin(ScrollTrigger, SplitText, CustomEase);
 
@@ -29,6 +31,8 @@ const App = () => {
         style={{ margin: "auto" }}
       />
       <CardSection />
+      <EchoText />
+      <Features />
     </>
   );
 };

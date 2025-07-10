@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "../components/Button";
 import MagneticButton from "../components/MagneticButton";
+import TextReveal from "../components/TextReveal";
 
 const Features = () => {
   return (
@@ -35,17 +36,23 @@ const Features = () => {
       <div className="h-full w-full" style={{ padding: "1rem" }}>
         <div className="text-light-300 text-center" style={{ padding: "3rem" }}>
           <div className="leading-16">
-            <h3 className="text-[5rem] font-editorial-italic">clean</h3>
-            <h3 className="text-[3.8rem] uppercase font-ppmori-bold">
-              Journal
-            </h3>
+            <TextReveal>
+              <h3 className="text-[5rem] font-editorial-italic">clean</h3>
+            </TextReveal>
+            <TextReveal>
+              <h3 className="text-[3.8rem] uppercase font-ppmori-bold">
+                Journal
+              </h3>
+            </TextReveal>
           </div>
-          <p
-            className="w-full max-w-[24rem] text-[0.8rem]"
-            style={{ margin: "auto" }}
-          >
-            Healty tips on skincare, regimen and overall a better lifestyle.
-          </p>
+          <TextReveal>
+            <p
+              className="w-full max-w-[24rem] text-[0.8rem]"
+              style={{ margin: "auto" }}
+            >
+              Healty tips on skincare, regimen and overall a better lifestyle.
+            </p>
+          </TextReveal>
         </div>
         <div className="flex items-center gap-5">
           <div className="w-[20rem]">
@@ -102,7 +109,7 @@ const Features = () => {
                 icon="/icons/arrow-right-dark.svg"
                 otherClasses="size-15 bg-light-300"
               />
-              <a className="underline text-light-500 uppercase text-[0.6rem]">
+              <a className="underline text-light-500 uppercase text-[0.6rem] will-change-transform">
                 See all
               </a>
             </div>

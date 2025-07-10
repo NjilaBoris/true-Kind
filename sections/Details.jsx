@@ -6,10 +6,30 @@ import productsDetails from "../constant";
 import MagneticButton from "../components/MagneticButton";
 import Button from "../components/Button";
 import TextReveal from "../components/TextReveal";
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "motion/react";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Details = () => {
+  const imageLeafref = useRef(null);
+  const imageIngredientRef = useRef(null);
+  const cardRef = useRef(null);
+  const { scrollYProgress: translateY } = useScroll({
+    target: imageLeafref,
+    offset: ["start end", "end start"],
+  });
+  const { scrollYProgress: yImage } = useScroll({
+    target: imageIngredientRef,
+    offset: ["start end", "end start"],
+  });
+  const { scrollYProgress: cardTranslate } = useScroll({
+    target: cardRef,
+    offset: ["start end", "end start"],
+  });
+  const y = useTransform(translateY, [0, 1], [0, -300]);
+  const translateImage = useTransform(yImage, [0, 1], [0, -300]);
+  const cardY = useTransform(cardTranslate, [0, 1], [0, -300]);
   return (
     <div className="h-[190vh] relative w-full">
       <div className="" style={{ padding: "5rem" }}>
@@ -31,14 +51,19 @@ const Details = () => {
           </TextReveal>
 
           <TextReveal>
-            <h2 className="text-[4.48rem] text-dark-300 font-editorial-italic scale-[1.2]">
+            <h2 className="text-[4.48rem] text-dark-300 font-editorial-italic scale-[1.2] ">
               skincare.
             </h2>
           </TextReveal>
         </div>
       </div>
-      <div className="absolute right-[20%] top-[20%] imgLeaf" data-speed="1">
-        <img src="/images/leaf.png" className="object-cover size-[15rem]" />
+      <div className="absolute right-[20%] top-[30%] imgLeaf">
+        <motion.img
+          style={{ y }}
+          src="/images/leaf.png"
+          className="object-cover size-[15rem]"
+          ref={imageLeafref}
+        />
       </div>
       <div className="h-screen w-full mask">
         <img
@@ -48,9 +73,11 @@ const Details = () => {
       </div>
       <div>
         {productsDetails.map(({ icon, name, details }) => (
-          <div
+          <motion.div
+            ref={cardRef}
+            style={{ y: cardY }}
             key={name}
-            className=" flex gap-2 absolute nth-of-type-1:top-[25%]  nth-of-type-2:top-[35%]
+            className=" flex gap-2 absolute nth-of-type-1:top-[35%]  nth-of-type-2:top-[45%]
              nth-of-type-3:right-[6%] nth-of-type-3:top-[45%] nth-of-type-4:right-[25%]
               nth-of-type-4:top-[55%] nth-of-type-1:left-[20%] nth-of-type-2:left-[2%] scale-[0.9]"
           >
@@ -75,10 +102,16 @@ const Details = () => {
                 <p className="leading-4">{details}</p>
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
-        <div className="absolute left-[25%] top-[58%]">
-          <img src="/images/empress.png" />
+        <div className="absolute left-[25%] top-[68%]">
+          <motion.img
+            src="/images/empress.png"
+            ref={imageIngredientRef}
+            style={{
+              y: translateImage,
+            }}
+          />
         </div>
       </div>
       <div
